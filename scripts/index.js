@@ -33,10 +33,10 @@ paymentForm.addEventListener('submit', (event) => {
   Toastify({
     text: "Pago agregado correctamente",
     duration: 3000,
-    gravity: "top",
+    gravity: "bottom",
     position: "right",
     style: {
-      background: "linear-gradient(90deg,#1c1c1ca9,#6220fbbb)",
+      background: "linear-gradient(90deg,#1c1c1cd2,#6220fbd2)",
     },
   }).showToast();
 
