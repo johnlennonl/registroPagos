@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+header {
+    background-color: #18181881;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+  }
+  
+  form input {
+    margin: 7px;
+    padding: 8px;
+  }
+  
+  .payment-card {
+    color: white;
+    font-size: 14px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 100%;
+    background-image: linear-gradient(90deg,#1c1c1ca9,#6220fbbb);
+  }
+
+  /* Btn de Pago*/
+  .BottonAgregarPago {
+    border-radius: .25rem;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #fff;
+    -webkit-clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+    clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+    height: 40px;
+    font-size: 0.7rem;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+    transition: .2s .1s;
+    background-image: linear-gradient(90deg,#1c1c1c,#6220fb);
+    border: 0 solid;
+    overflow: hidden;
+  }
+  
+  .BottonAgregarPago:hover {
+    cursor: pointer;
+    transition: all .3s ease-in;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+/* Inptt*/ 
+.input {
+    color: #fff;
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: 1px solid #6220fb;
+    border-bottom: var(--border-height) solid var(--border-before-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .input-border {
+    position: absolute;
+    background: var(--border-after-color);
+    height: 2px;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0%);
+    transition: transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+  
+  .input:focus {
+    outline: none;
+  }
+  
+  .input:focus + .input-border {
+    transform: scaleX(100%);
+  }
+  
+  .form-control {
+    position: relative;
+    --width-of-input: 300px;
+  }
+  
+
+  .input-alt:focus + .input-border-alt {
+    transform: scaleX(100%);
+  }
+  
