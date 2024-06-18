@@ -44,16 +44,25 @@ paymentForm.addEventListener('submit', (event) => {
 });
 
 function renderPaymentCard(payment) {
-  const paymentCard = document.createElement('div');
-  paymentCard.classList.add('payment-card');
-  paymentCard.innerHTML = `
-    <h3>Pago #${payment.id}</h3>
-    <p>Nombre: ${payment.name}</p>
-    <p> Id Proporcionado: ${payment.payment}</p>
-    <p> Metodo de Pago: ${payment.metodo}</p>
-    <p> Monto: $${payment.monto} USD</p>
-    <p>Fecha y Hora: ${payment.date}</p>
-  `;
-  paymentCards.appendChild(paymentCard);
+    const paymentCard = document.createElement('div');
+    paymentCard.classList.add('payment-card');
+    paymentCard.dataset.aos = "fade-right"; // Agregar atributo data-aos
+    paymentCard.innerHTML = `
+        <h3>Pago #${payment.id}</h3>
+        <p>Nombre: ${payment.name}</p>
+        <p> Id Proporcionado: ${payment.payment}</p>
+        <p> Metodo de Pago: ${payment.metodo}</p>
+        <p> Monto: $${payment.monto} USD</p>
+        <p>Fecha y Hora: ${payment.date}</p>
+    `;
+    paymentCards.appendChild(paymentCard);
+
+    // Inicializar AOS para el nuevo elemento
+    AOS.init({
+        once: true, 
+        duration:2000,
+        // Animar solo una vez
+        // ... otras opciones de configuración de AOS (opcional)
+    });
 }
 
